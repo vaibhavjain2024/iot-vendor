@@ -1,0 +1,16 @@
+FunctionName: msil-iot-vendor-delete-configuration-lambda
+EnviormentVar: 
+  dev:
+    REGION: ap-south-1
+  QA:
+    REGION: ap-south-1
+  prod:
+    REGION: ap-south-1
+
+Configuration:
+  Timeout: 30
+  MemorySize: 128
+Layer:
+  - vendor
+AWSPolicy:
+    - service-role/AWSLambdaBasicExecutionRole
