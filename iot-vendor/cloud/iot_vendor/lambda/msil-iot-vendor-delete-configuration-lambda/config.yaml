@@ -14,3 +14,5 @@ Layer:
   - vendor
 AWSPolicy:
     - service-role/AWSLambdaBasicExecutionRole
+    - AmazonAPIGatewayAdministrator
+    - AmazonSSMFullAccess

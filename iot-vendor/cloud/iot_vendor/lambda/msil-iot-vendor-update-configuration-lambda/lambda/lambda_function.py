@@ -1,10 +1,16 @@
 import json
 import os
-from vendor.services.configuration_service import ConfigurationService
+from VENDOR.services.configuration_service import ConfigurationService
+from VENDOR.keyAuthentication.common.decorators import api_key_auth
+from VENDOR.keyAuthentication.api_key_validator import APIKeyValidator
 import aws_helper
 
 # from logger_common import get_logger
 # logger = get_logger()
+
+@api_key_auth(APIKeyValidator)
+def update_configuration(event, service, vendor_group, module, environment, secret_name, config_value):
+    service.update_configuration(vendor_group, module, environment, secret_name, config_value)
 
 def lambda_handler(event, context):
     """Lambda handler to update the vandor configuration."""   
@@ -27,7 +33,15 @@ def lambda_handler(event, context):
     config_service = ConfigurationService(region_name)
 
     try:
-        config_service.update_configuration(vendor_group, module, environment, secret_name, config_value)
+        update_configuration(
+                event, 
+                service=config_service, 
+                vendor_group=vendor_group, 
+                module=module, 
+                environment=environment, 
+                secret_name=secret_name, 
+                config_value=config_value
+            )
         return {
             'statusCode': 200,
             'body': json.dumps({'message': 'Configuration updated successfully'})
