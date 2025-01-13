@@ -1,0 +1,80 @@
+{
+    "developVendor" :[
+        {
+            "httpApiGatewayName": "msil-iot-vendor-2-apis",
+            "routeName" : "iot-vendor/create-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-create-configuration-lambda",
+            "methodType":["POST"]
+        },
+        {
+            "httpApiGatewayName": "msil-iot-vendor-2-apis",
+            "routeName" : "iot-vendor/update-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-update-configuration-lambda",
+            "methodType":["PUT"]
+        },
+        {
+            "httpAuthorizerName":"vendorCognitoAuthorizer",
+            "routeName" : "iot-vendor/delete-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-delete-configuration-lambda",
+            "methodType":["DELETE"]
+        },
+        {
+            "httpAuthorizerName":"vendorCognitoAuthorizer",
+            "routeName" : "iot-vendor/get-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-get-configuration-lambda",
+            "methodType":["GET"]
+        }
+    ],
+    "QAVendor" :[
+        {
+            "httpApiGatewayName": "msil-iot-vendor-2-apis",
+            "routeName" : "iot-vendor/create-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-create-configuration-lambda",
+            "methodType":["POST"]
+        },
+        {
+            "httpApiGatewayName": "msil-iot-vendor-2-apis",
+            "routeName" : "iot-vendor/update-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-update-configuration-lambda",
+            "methodType":["PUT"]
+        },
+        {
+            "httpAuthorizerName":"vendorCognitoAuthorizer",
+            "routeName" : "iot-vendor/delete-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-delete-configuration-lambda",
+            "methodType":["DELETE"]
+        },
+        {
+            "httpAuthorizerName":"vendorCognitoAuthorizer",
+            "routeName" : "iot-vendor/get-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-get-configuration-lambda",
+            "methodType":["GET"]
+        }
+    ],
+    "productionVendor":[
+        {
+            "httpApiGatewayName": "msil-iot-vendor-2-apis",
+            "routeName" : "iot-vendor/create-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-create-configuration-lambda",
+            "methodType":["POST"]
+        },
+        {
+            "httpApiGatewayName": "msil-iot-vendor-2-apis",
+            "routeName" : "iot-vendor/update-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-update-configuration-lambda",
+            "methodType":["PUT"]
+        },
+        {
+            "httpAuthorizerName":"vendorCognitoAuthorizer",
+            "routeName" : "iot-vendor/delete-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-delete-configuration-lambda",
+            "methodType":["DELETE"]
+        },
+        {
+            "httpAuthorizerName":"vendorCognitoAuthorizer",
+            "routeName" : "iot-vendor/get-vendor-configuration",
+            "lambdaName": "msil-iot-vendor-get-configuration-lambda",
+            "methodType":["GET"]
+        }
+    ]
+}
