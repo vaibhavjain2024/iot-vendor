@@ -27,6 +27,11 @@ def lambda_handler(event, context):
 
     region_name = query_params.get('region_name', os.environ.get("REGION", "ap-south-1"))
 
+    try:
+        config_value = json.loads(config_value)
+    except Exception as e:
+        pass
+
     if not all([vendor_group, module, environment, secret_name, config_value]):
         return aws_helper.lambda_response(status_code=400, data={}, msg="All parameters are mandatory: vendor_group, module, environment, secret_name, config_value")
 
